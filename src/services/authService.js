@@ -5,8 +5,12 @@ export async function login(authDetail){
         body: JSON.stringify(authDetail)
     }
     const response = await fetch(`${process.env.REACT_APP_HOST}/login`, requestOptions);
-    if(!response.ok){
-        throw { message: response.statusText, status: response.status }; //eslint-disable-line
+   if (!response.ok) {
+      if (response.status === 400) {
+        throw new Error("This email is not registered. Please sign up.");
+      } else {
+        throw new Error(`HTTP error! Status: ${response.status}, Message: ${response.statusText}`);
+      }
     }
     const data = await response.json();
 
@@ -25,8 +29,11 @@ export async function register(authDetail){
         body: JSON.stringify(authDetail)
     }  
     const response = await fetch(`${process.env.REACT_APP_HOST}/register`, requestOptions);
-    if(!response.ok){
-        throw { message: response.statusText, status: response.status }; //eslint-disable-line
+    if (response.status === 400) {
+        throw new Error("This email is already exist. Please Login in.");
+      } else {
+        throw new Error(`HTTP error! Status: ${response.status}, Message: ${response.statusText}`);
+      }
     }
     const data = await response.json();
     
