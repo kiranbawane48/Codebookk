@@ -1,3 +1,30 @@
+**Deployment Link:** https://kiran-bawane-codebookk.netlify.app/
+
+
+**Technologies:** HTML, Tailwind CSS, ReactJs, GIT, Netlify
+
+
+
+**Demo:**
+
+****HOMEPAGE****
+<div align="center" style="margin-top: 10px;">
+  <img src="https://github.com/kiranbawane48/Codebook/assets/100428197/a7575f22-a50c-4e75-9839-0f3cf5a8354c" alt="Image" width="400" height="300">
+</div>
+
+
+
+
+****PRODUCT PAGE****
+
+
+<div align="center" style="margin-top: 10px;">
+  <img src="https://github.com/kiranbawane48/Codebook/assets/100428197/c6cb00e1-401e-4eeb-bda0-0393423879ba" alt="Image" width="400" height="300">
+</div>
+
+
+****web service https://codebook-mock-server-8qkl.onrender.com/ REACT_APP_HOST****
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
